@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <link rel='stylesheet' type='text/css' href="style.css">
+</head>
+
+<body>
+    <script src="validation.js"></script>
+    <h1>Registration form</h1>
+    <div class="form-container">
+        <form name="registerForm">
+
+            <label for="firstName">First Name *</label>
+            <input type="text" id="firstName" name="firstName" placeholder="First Name" required/>
+            <p class="error-message"></p>
+
+            <label for="lastName">Last Name *</label>
+            <input type="text" id="lastName" placeholder="Last Name" required/>
+            <p class="error-message"></p>
+
+            <label for="e-mail">E-mail address *</label>
+            <input type="text" id="e-mail" placeholder="E-mail address" required/>
+            <p class="error-message"></p>
+
+            <label for="phoneNumber">Phone Number</label>
+            <input type="text" id="phoneNumber" maxlength="10" pattern=".{9,}" required title="9 characters length" placeholder="Phone number" />
+            <p class="error-message"></p>
+
+            <label for="country">Country Name</label>
+            <input type="text" id="country" placeholder="Country Name" />
+            <p class="error-message"></p>
+
+            <label for="date">Date</label>
+            <input type="text" id="date" placeholder="DD/MM/YYYY" />
+            <p class="error-message"></p>
+
+            <label for="password">Password *</label>
+            <input type="password" id="password" pattern=".{8,}" placeholder="Password" required title="8 characters minimum" />
+
+            <label for="password">Confirm Password *</label>
+            <input type="password" id="password" pattern=".{8,}" placeholder="Confirm Password" required title="8 characters minimum" />
+            <p class="error-message"></p>
+            <p class="password-rules">Your password should contain at least 8 characters along with 1 digit.</p>
+
+            <div class="radio-question">
+                <p>Where did you find us?</p>
+                <form>
+                    <input class="radio-input" type="radio" name="media" value="TV" /> TV <br>
+                    <input class="radio-input" type="radio" name="media" value="internet" /> Internet <br>
+                    <input class="radio-input" type="radio" name="media" value="newspaper" /> Newspaper <br>
+                    <input class="radio-input" type="radio" name="media" value="recommend" /> Recommendation <br>
+            </div>
+            <input class="button" type="submit" value="submit" name="submit" onClick="formValidation()" />
+            </form>
+    </div>
+</body>
+
+</html>
